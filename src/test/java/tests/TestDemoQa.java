@@ -1,6 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.io.File;
 import static com.codeborne.selenide.Condition.text;
@@ -10,6 +12,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 public class TestDemoQa {
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browserSize = "1920x1080";
+    }
 
     @Test
     void formTest(){
@@ -45,7 +52,6 @@ public class TestDemoQa {
         $("#stateCity-wrapper").$(byText("Delhi")).click();
         $("#submit").click();
         });
-
         step("Check form results", () -> {
         $(".modal-content").shouldBe(Condition.visible);
         $(".modal-content").shouldHave(text("Mike Turilov"));
