@@ -9,10 +9,10 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-public class TestDemoQa {
+public class TestDemoQa extends TestBase {
 
     @Test
-    void formTest(){
+    void formTest  () {
         step("Open registrations form", () -> {
             open("/automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
