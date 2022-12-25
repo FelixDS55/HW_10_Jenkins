@@ -19,15 +19,11 @@ public class TestBase {
         Configuration.timeout = 10000;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
 
 //        Configuration.browser = System.getProperty("browser");
-//        Configuration.baseUrl = "https://demoqa.com";
 //        Configuration.browserVersion = System.getProperty("version");
 //        Configuration.browserSize = System.getProperty("size", "1920x1080");
+//        Configuration.baseUrl = "https://demoqa.com";
 //        Configuration.timeout = 10000;
 //        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
