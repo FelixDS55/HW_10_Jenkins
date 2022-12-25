@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
 
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
