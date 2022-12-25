@@ -20,7 +20,7 @@ public class TestBase {
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
 
-//        Configuration.browser = System.getProperty("browser");
+        Configuration.browser = System.getProperty("browser");
 //        Configuration.browserVersion = System.getProperty("version");
 //        Configuration.browserSize = System.getProperty("size", "1920x1080");
 //        Configuration.baseUrl = "https://demoqa.com";
@@ -28,10 +28,10 @@ public class TestBase {
 //        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 //
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("enableVNC", true);
-//        capabilities.setCapability("enableVideo", true);
-//        Configuration.browserCapabilities = capabilities;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
