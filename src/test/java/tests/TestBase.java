@@ -16,7 +16,7 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.timeout = 10000;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         String[] browserSettings = System.getProperty("browser", "chrome 100").split("\\s+");
         Configuration.browserVersion = System.getProperty("version");
