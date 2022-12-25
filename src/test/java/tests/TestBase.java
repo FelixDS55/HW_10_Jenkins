@@ -15,19 +15,14 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
-//        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         String[] browserSettings = System.getProperty("browser", "chrome 100").split("\\s+");
-//        Configuration.browser = System.getProperty("browser");
-//        Configuration.browserVersion = System.getProperty("version");
+        Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("size", "1920x1080");
-//        Configuration.baseUrl = "https://demoqa.com";
-//        Configuration.timeout = 10000;
-//        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-//
+        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
