@@ -36,7 +36,6 @@ dependencies {
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -47,6 +46,11 @@ tasks.withType(Test) {
     }
 }
 
+task smoke_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("smoke")
+    }
+}
 
 help {
     doFirst {
