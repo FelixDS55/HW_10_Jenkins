@@ -14,12 +14,11 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        String browserName = System.getProperty("browser");
+        Configuration.browser = System.getProperty("browser", "chrome 100");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserVersion = System.getProperty("version");
-        String versionBrowser = Configuration.browserSize = "1920x1080";
-//        Configuration.timeout = 10000;
-        String seleniodStart =
+        Configuration.browserSize = System.getProperty("version", "1920x1080");
+        Configuration.timeout = 10000;
         Configuration.remote = System.getProperty("selenoid");
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
