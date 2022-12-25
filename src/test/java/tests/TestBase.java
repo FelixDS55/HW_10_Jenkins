@@ -16,7 +16,8 @@ public class TestBase {
     static void beforeAll() {
         String browserName = System.getProperty("browser");
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        String versionBrowser = System.getProperty("version");
+//        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
         String seleniodStart = System.getProperty("selenoid");
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
