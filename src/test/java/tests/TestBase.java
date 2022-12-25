@@ -14,6 +14,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
+        String browserName = System.getProperty("browser");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
