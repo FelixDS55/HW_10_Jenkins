@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
 
-
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
@@ -31,6 +30,7 @@ public class TestBase {
 
     @BeforeEach
     void addListener() {
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
